@@ -1,8 +1,10 @@
+import { Button } from "./components/ui/button";
+
 function App() {
   return (
     <>
       <div>
-        <p>Hello</p>
+        <Button>Click me</Button>
       </div>
     </>
   );
