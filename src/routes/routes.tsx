@@ -24,7 +24,7 @@ const router = createBrowserRouter([
         Component: AddBook,
       },
       {
-        path: "borrow-summery",
+        path: "borrow-summary",
         Component: BorrowSummary,
       },
     ],
