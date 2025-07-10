@@ -1,10 +1,33 @@
+import MainLayout from "@/layout/MainLayout";
+import AddBook from "@/pages/AddBook";
+import AllBooks from "@/pages/AllBooks";
+import BorrowSummary from "@/pages/BorrowSummary";
+import Home from "@/pages/Home";
 import { createBrowserRouter } from "react-router";
-import App from "../App";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    Component: App,
+    Component: MainLayout,
+    children: [
+      {
+        path: "/",
+        Component: Home,
+        index: true,
+      },
+      {
+        path: "books",
+        Component: AllBooks,
+      },
+      {
+        path: "create-book",
+        Component: AddBook,
+      },
+      {
+        path: "borrow-summery",
+        Component: BorrowSummary,
+      },
+    ],
   },
 ]);
 
